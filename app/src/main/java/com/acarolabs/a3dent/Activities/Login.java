@@ -22,7 +22,7 @@ public class Login extends ActionBarActivity {
     public void onclick(View view){
 
 
-        Intent intent = new Intent(this,Activity2.class);
+        Intent intent = new Intent(this,RedimirActivity.class);
         startActivity(intent);
     }
 

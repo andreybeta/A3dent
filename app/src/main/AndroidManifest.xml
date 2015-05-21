@@ -24,6 +24,10 @@
             android:name=".MainActivity"
             android:label="@string/title_activity_login" >
         </activity>
+        <activity
+            android:name=".Activities.RedimirActivity"
+            android:label="@string/title_activity_redimir" >
+        </activity>
     </application>
 
 </manifest>
