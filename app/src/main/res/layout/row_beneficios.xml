@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:layout_margin="1dp"
+    android:id="@+id/card_view"
+    android:background="@color/fondo"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+
+
+    card_view:cardCornerRadius="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Tipicuy"
+            android:id="@+id/nombre"
+
+            android:textColor="@color/texto"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/image"
+            android:layout_toEndOf="@+id/image"
+            android:layout_marginRight="2dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Comida Tipica Nariñense"
+            android:id="@+id/descripcion"
+            android:textColor="@color/text_color"
+            android:layout_below="@+id/nombre"
+            android:layout_toRightOf="@+id/image"
+            android:layout_toEndOf="@+id/image" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="30-45M. $15000 minimo"
+            android:id="@+id/minimos"
+            android:textColor="@color/text_color"
+            android:layout_below="@+id/descripcion"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentBottom="false"
+            android:layout_marginTop="5dp" />
+
+
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
