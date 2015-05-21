@@ -5,6 +5,7 @@ import android.app.FragmentTransaction;
 import android.os.Bundle;
 
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -28,22 +29,21 @@ public class Activity2 extends ActionBarActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.activity_my_toolbar);
         toolbar.setTitle("A3Dent");
         setSupportActionBar(toolbar);
-      /*  RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view); // Assigning the RecyclerView Object to the xml View
 
-        mRecyclerView.setHasFixedSize(true);
-*/
         //BeneficiosAdapter mAdapter = new BeneficiosAdapter()
 
        /* mRecyclerView.setAdapter(mAdapter);                              // Setting the adapter to RecyclerView
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));   */              // Setting the layout Manager
         // Letting the system know that the list objects are of fixed size
 
+        Tab1Fragment fragments = new Tab1Fragment();
+
         FragmentManager manager = getFragmentManager();//llevar fragmnetos a nivel de cofigo
         FragmentTransaction fragmentTransaccion = manager.beginTransaction();//agregar , remover , pasar cosas al fragmento
 
-        fragmentTransaccion.add(R.id.principal, fragments);//por cada fragmento que tenga lo añado a la vista. hide()pa que no los muestre todos a lavez entnces mientras ocultalo
+        fragmentTransaccion.add(R.id.principal, fragments).hide(fragments);//por cada fragmento que tenga lo añado a la vista. hide()pa que no los muestre todos a lavez entnces mientras ocultalo
 
-        fragmentTransaccion.show(fragments);
+        fragmentTransaccion.show(fragments).commit();
 
         new BeneficiosTask(this).execute();
 

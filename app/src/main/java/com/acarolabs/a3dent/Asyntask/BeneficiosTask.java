@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * Created by personal on 21/05/15.
  */
-public class BeneficiosTask extends AsyncTask<Void,Void,List<Beneficios>>{
+public class BeneficiosTask extends AsyncTask<Void,Void,ArrayList<Beneficios>>{
 
     private Activity activity;
 
@@ -25,15 +25,16 @@ public class BeneficiosTask extends AsyncTask<Void,Void,List<Beneficios>>{
         this.activity = activity;
     }
     @Override
-    protected List<Beneficios> doInBackground(Void... voids) {
+    protected ArrayList<Beneficios> doInBackground(Void... voids) {
 
 
-        List<Beneficios> bene = new ArrayList<Beneficios>() ;
-        bene.add(new Beneficios("hola","10","esta"));
+        ArrayList<Beneficios> bene = new ArrayList<Beneficios>() ;
+        bene.add(new Beneficios("hola","10","Panomarica dental"));
+        bene.add(new Beneficios("hola","30","Radiografia Nueva"));
         return bene;
     }
     @Override
-    protected void onPostExecute(List<Beneficios> result) {
+    protected void onPostExecute(ArrayList<Beneficios> result) {
 
         RecyclerView recyclerView = (RecyclerView)  activity.findViewById(R.id.my_recycler_view);
         recyclerView.setHasFixedSize(true);//que todo lo optimize

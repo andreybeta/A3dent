@@ -39,8 +39,8 @@ public class Tab1Fragment extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState){
         super.onActivityCreated(savedInstanceState);
         ArrayList<Beneficios> beneficiosArrayList = new ArrayList<Beneficios>();
-        List<Beneficios> bene = new ArrayList<Beneficios>() ;
-        bene.add(new Beneficios("hola","10","esta"));
+
+        beneficiosArrayList.add(new Beneficios("hola","10","esta"));
 
 
         /*
