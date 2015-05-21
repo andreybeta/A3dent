@@ -8,9 +8,9 @@ import java.net.URL;
 public class Beneficios {
     private String beneficios;
     private String puntos;
-    private URL imagen;
+    private String imagen;
 
-    public Beneficios(String beneficios, String puntos, URL imagen) {
+    public Beneficios(String beneficios, String puntos, String imagen) {
 
         this.beneficios = beneficios;
         this.puntos = puntos;
@@ -32,11 +32,11 @@ public class Beneficios {
         this.puntos = puntos;
     }
 
-    public URL getImagen() {
+    public String getImagen() {
         return imagen;
     }
 
-    public void setImagen(URL imagen) {
+    public void setImagen(String imagen) {
         this.imagen = imagen;
     }
 

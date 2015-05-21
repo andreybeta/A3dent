@@ -38,7 +38,13 @@ public class BeneficiosAdapter extends RecyclerView.Adapter<BeneficiosAdapter.Vi
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder viewHolder, int i) {
+    public void onBindViewHolder(BeneficiosAdapter.ViewHolder holder, int position) {
+
+        Beneficios beneficio =listaBeneficios.get(position);
+
+        holder.descripcion.setText(beneficio.getBeneficios() );
+        holder.puntos.setText(beneficio.getPuntos());
+
 
     }
 
@@ -57,8 +63,6 @@ public class BeneficiosAdapter extends RecyclerView.Adapter<BeneficiosAdapter.Vi
             imagen = (ImageView) itemView.findViewById(R.id.imageView);
             descripcion =(TextView) itemView.findViewById(R.id.txtDescripcion);
             puntos =(TextView) itemView.findViewById(R.id.txtPuntos);
-
-
 
 
         }
