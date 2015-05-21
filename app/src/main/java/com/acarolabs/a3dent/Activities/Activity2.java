@@ -8,7 +8,10 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.acarolabs.a3dent.Asyntask.BeneficiosTask;
 import com.acarolabs.a3dent.Fragments.Tab1Fragment;
+import com.acarolabs.a3dent.Models.Beneficios;
 import com.acarolabs.a3dent.R;
 
 
@@ -38,9 +41,12 @@ public class Activity2 extends ActionBarActivity {
         FragmentManager manager = getFragmentManager();//llevar fragmnetos a nivel de cofigo
         FragmentTransaction fragmentTransaccion = manager.beginTransaction();//agregar , remover , pasar cosas al fragmento
 
-        fragmentTransaccion.add(R.id.principal,fragments);//por cada fragmento que tenga lo añado a la vista. hide()pa que no los muestre todos a lavez entnces mientras ocultalo
+        fragmentTransaccion.add(R.id.principal, fragments);//por cada fragmento que tenga lo añado a la vista. hide()pa que no los muestre todos a lavez entnces mientras ocultalo
 
         fragmentTransaccion.show(fragments);
+
+        new BeneficiosTask(this).execute();
+
 
 
 

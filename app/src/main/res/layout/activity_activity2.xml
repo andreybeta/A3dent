@@ -8,31 +8,10 @@
     tools:context="com.acarolabs.a3dent.Activities.Activity2">
 
 
-
     <include
-
         layout="@layout/toolbar"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         />
-
-    <com.android4devs.slidingtab.SlidingTabLayout
-        android:id="@+id/tabs"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:elevation="2dp"
-        android:background="@color/primary"/>
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/pager"
-
-        android:layout_height="match_parent"
-        android:layout_width="match_parent"
-        android:layout_weight="1">
-
-    </android.support.v4.view.ViewPager>
-
-
-
 
 </LinearLayout>
