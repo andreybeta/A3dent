@@ -36,7 +36,7 @@ public class RedimirActivity extends ActionBarActivity {
             public void onClick(DialogInterface dialog, int which) {
 
                 // aquí puedes añadir funciones
-                
+
             }
         });
         //alertDialog.setIcon(R.drawable.icon);
