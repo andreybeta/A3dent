@@ -1,9 +1,13 @@
 package com.acarolabs.a3dent.Activities;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.app.AlertDialog;
+import android.view.View;
 
 import com.acarolabs.a3dent.R;
 
@@ -13,7 +17,34 @@ public class RedimirActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_redimir);
+
+
+
     }
+
+    public void dialog(View view){
+
+
+       /* Intent intent = new Intent(this,Login.class);
+        startActivity(intent);*/
+
+        AlertDialog alertDialog = new AlertDialog.Builder(this).create();
+        alertDialog.setTitle("Redimir...");
+        alertDialog.setMessage("Estás seguro?");
+
+        alertDialog.setButton("Aceptar", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+
+                // aquí puedes añadir funciones
+                
+            }
+        });
+        //alertDialog.setIcon(R.drawable.icon);
+        alertDialog.show();
+
+
+    }
+
 
 
     @Override
