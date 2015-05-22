@@ -29,4 +29,11 @@ dependencies {
     compile 'com.android.support:support-v13:21.0.+'
     compile 'it.neokree:MaterialTabs:0.11'
 
+    compile 'com.ogaclejapan.smarttablayout:library:1.1.3@aar'
+
+    //Optional: see how to use the utility.
+    compile 'com.ogaclejapan.smarttablayout:utils-v4:1.1.3@aar'
+
+
+
 }

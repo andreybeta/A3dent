@@ -10,4 +10,7 @@
     <color name="texto">#424242</color>
     <color name="fondo">#fff</color>
     <color name="fondo2">#ffdddddd</color>
+    <color name="tabsScrollColor">#004D40</color>
+
 </resources>
+
