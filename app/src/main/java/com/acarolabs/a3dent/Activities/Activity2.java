@@ -51,7 +51,7 @@ public class Activity2 extends ActionBarActivity implements MaterialTabListener 
         setSupportActionBar(toolbar);
 
 
-        //
+
 
 
         FragmentPagerItemAdapter adapter = new FragmentPagerItemAdapter(
@@ -111,7 +111,7 @@ public class Activity2 extends ActionBarActivity implements MaterialTabListener 
         fragmentTransaccion.show(fragments).commit();
 
 */
-       // new BeneficiosTask(this).execute();
+  //      new BeneficiosTask(this).execute();
 
 
 

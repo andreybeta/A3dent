@@ -29,8 +29,8 @@ public class BeneficiosTask extends AsyncTask<Void,Void,ArrayList<Beneficios>>{
 
 
         ArrayList<Beneficios> bene = new ArrayList<Beneficios>() ;
-        bene.add(new Beneficios("hola","10","Panomarica dental"));
-        bene.add(new Beneficios("hola","30","Radiografia Nueva"));
+        bene.add(new Beneficios("Panomarica dental","10","Panomarica dental"));
+        bene.add(new Beneficios("Radiografia Nueva","30","Radiografia Nueva"));
         return bene;
     }
     @Override

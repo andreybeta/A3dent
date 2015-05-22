@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.acarolabs.a3dent.Adapters.BeneficiosAdapter;
+import com.acarolabs.a3dent.Asyntask.BeneficiosTask;
 import com.acarolabs.a3dent.Models.Beneficios;
 import com.acarolabs.a3dent.R;
 
@@ -41,14 +42,15 @@ public class Tab1Fragment extends android.support.v4.app.Fragment {
         super.onActivityCreated(savedInstanceState);
         ArrayList<Beneficios> beneficiosArrayList = new ArrayList<Beneficios>();
 
-        beneficiosArrayList.add(new Beneficios("hola","10","esta"));
+        //beneficiosArrayList.add(new Beneficios("hola","10","esta"));
 
 
         /*
         creamos arraylist purbea
          */
 
-        beneficiosArrayList.add(new Beneficios("hola","10","esta"));
+       // beneficiosArrayList.add(new Beneficios("hola","10","esta"));
+        new BeneficiosTask(this.getActivity()).execute();
 
         recyclerView = (RecyclerView) getActivity().findViewById(R.id.my_recycler_view);
         recyclerView.setHasFixedSize(true);//que todo lo optimize
@@ -58,6 +60,10 @@ public class Tab1Fragment extends android.support.v4.app.Fragment {
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));//linear x q es lienas o si no tambn grillas
         recyclerView.setItemAnimator(new DefaultItemAnimator());
+
+        //new BeneficiosTask(this.getActivity()).execute();
+
+
 
     }
 }
