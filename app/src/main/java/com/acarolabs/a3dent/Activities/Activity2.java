@@ -4,19 +4,29 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 
+import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.acarolabs.a3dent.Adapters.ViewPagerAdapter;
 import com.acarolabs.a3dent.Asyntask.BeneficiosTask;
 import com.acarolabs.a3dent.Fragments.Tab1Fragment;
 import com.acarolabs.a3dent.Models.Beneficios;
 import com.acarolabs.a3dent.R;
 
+import it.neokree.materialtabs.MaterialTab;
+import it.neokree.materialtabs.MaterialTabHost;
+import it.neokree.materialtabs.MaterialTabListener;
 
-public class Activity2 extends ActionBarActivity {
+
+public class Activity2 extends ActionBarActivity /*implements MaterialTabListener*/ {
+
+    MaterialTabHost tabHost;
+    ViewPager pager;
 
     private Tab1Fragment fragments = new Tab1Fragment();
 
@@ -30,6 +40,13 @@ public class Activity2 extends ActionBarActivity {
         toolbar.setTitle("A3Dent");
         setSupportActionBar(toolbar);
 
+        tabHost = (MaterialTabHost) this.findViewById(R.id.tabHost);
+        pager = (ViewPager) this.findViewById(R.id.pager);
+
+        /*
+        adapter = new ViewPagerAdapter(getSupportFragmentManager());
+        pager.setAdapter(adapter)
+        */
         //BeneficiosAdapter mAdapter = new BeneficiosAdapter()
 
        /* mRecyclerView.setAdapter(mAdapter);                              // Setting the adapter to RecyclerView
@@ -40,10 +57,11 @@ public class Activity2 extends ActionBarActivity {
 
         FragmentManager manager = getFragmentManager();//llevar fragmnetos a nivel de cofigo
         FragmentTransaction fragmentTransaccion = manager.beginTransaction();//agregar , remover , pasar cosas al fragmento
-
-        fragmentTransaccion.add(R.id.principal, fragments).hide(fragments);//por cada fragmento que tenga lo añado a la vista. hide()pa que no los muestre todos a lavez entnces mientras ocultalo
+        //fragmentTransaccion.add(R.id.principal,fragments);
+        /*fragmentTransaccion.add(R.id.principal, fragments).hide(fragments);//por cada fragmento que tenga lo añado a la vista. hide()pa que no los muestre todos a lavez entnces mientras ocultalo
 
         fragmentTransaccion.show(fragments).commit();
+        */
 
         new BeneficiosTask(this).execute();
 
@@ -73,4 +91,20 @@ public class Activity2 extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+/*
+    @Override
+    public void onTabSelected(MaterialTab materialTab) {
+
+    }
+
+    @Override
+    public void onTabReselected(MaterialTab materialTab) {
+
+    }
+
+    @Override
+    public void onTabUnselected(MaterialTab materialTab) {
+
+    }
+    */
 }

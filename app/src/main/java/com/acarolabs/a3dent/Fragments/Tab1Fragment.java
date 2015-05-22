@@ -2,7 +2,8 @@ package com.acarolabs.a3dent.Fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
+
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -21,7 +22,7 @@ import java.util.List;
 /**
  * Created by hp1 on 21-01-2015.
  */
-public class Tab1Fragment extends Fragment {
+public class Tab1Fragment extends android.support.v4.app.Fragment {
 
     BeneficiosAdapter beneficiosAdapter;
     RecyclerView recyclerView;

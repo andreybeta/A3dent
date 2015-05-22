@@ -30,12 +30,16 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
         if(position == 0) // if the position is 0 we are returning the First tab
         {
             Tab1Fragment tab1 = new Tab1Fragment();
-            return tab1;
+            return null;
+
+
+           // return (android.support.v4.app.Fragment)Fragmenttab1;
         }
         else             // As we are having 2 tabs if the position is now 0 it must be 1 so we are returning second tab
         {
-            Tab2 tab2 = new Tab2();
-            return tab2;
+            //Tab2 tab2 = new Tab2();
+            //return tab2;
+            return null;
         }
 
 
