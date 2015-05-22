@@ -47,7 +47,7 @@ public class RedimirAdapters extends RecyclerView.Adapter<RedimirAdapters.ViewHo
 
     @Override
     public int getItemCount() {
-        return 0;
+        return redimirs.size();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
