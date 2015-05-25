@@ -28,6 +28,10 @@
             android:name=".Activities.RedimirActivity"
             android:label="@string/title_activity_redimir" >
         </activity>
+        <activity
+            android:name=".Activities.notificationActivity"
+            android:label="@string/title_activity_notification" >
+        </activity>
     </application>
 
 </manifest>
