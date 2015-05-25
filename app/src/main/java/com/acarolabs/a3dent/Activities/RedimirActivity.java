@@ -4,19 +4,37 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.app.AlertDialog;
 import android.view.View;
+import android.widget.TextView;
 
+
+
+import com.acarolabs.a3dent.Fragments.RedimirFragment;
 import com.acarolabs.a3dent.R;
 
 public class RedimirActivity extends ActionBarActivity {
+    int total;
+    int point;
+    String service;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_redimir);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.activity_my_toolbar);
+        toolbar.setTitle("A3Dent");
+        setSupportActionBar(toolbar);
+        total = getIntent().getIntExtra("total", 0);
+        point = getIntent().getIntExtra("point",0);
+        service = getIntent().getStringExtra("service");
+        RedimirFragment fragment = (RedimirFragment)getSupportFragmentManager().findFragmentById(R.id.fragmentRedimir);
+        fragment.setAdapter(Integer.toString(total),Integer.toString(point),service);
+
 
 
 
