@@ -48,7 +48,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_gravity="right"
             android:text="30"
-            android:id="@+id/txtPoints"
+            android:id="@+id/txtPointsPoints"
             android:layout_weight="1" />
     </LinearLayout>
 </android.support.v7.widget.CardView>
