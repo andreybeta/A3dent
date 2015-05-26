@@ -35,7 +35,7 @@
 
         <Button
             android:drawableLeft="@drawable/at"
-            android:text="@string/at"
+            android:text="3dent"
             android:paddingLeft="10dp"
             android:layout_marginBottom="4dp"
             android:gravity="center"
@@ -44,7 +44,8 @@
             android:background="#95000000"
             android:layout_width="250dp"
 
-            android:layout_height="43dp" />
+            android:layout_height="43dp"
+            android:id="@+id/contact" />
 
         <Button
             android:drawableLeft="@drawable/phone"

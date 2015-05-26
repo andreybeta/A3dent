@@ -11,61 +11,61 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" />
 
-<LinearLayout
-    android:background="#D9000000"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    <LinearLayout
+        android:background="#D9000000"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
 
 
-    <ImageView
-        android:src="@drawable/dent"
-        android:layout_width="250dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="30dp"
-        android:layout_gravity="center_vertical|center_horizontal"
-        android:id="@+id/imageView"
-        android:focusable="false" />
+        <ImageView
+            android:src="@drawable/dent"
+            android:layout_width="250dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:id="@+id/imageView"
+            android:focusable="false" />
 
-      <EditText
-          android:hint="Email"
-          android:layout_width="280dp"
-          android:layout_height="43dp"
-          android:layout_marginTop="60dp"
-          android:paddingLeft="22dp"
-          android:layout_gravity="center_vertical|center_horizontal"
-          android:textColor="#757575"
-          android:textColorHint="#757575"
-          android:layout_marginBottom="6dp"
-          android:inputType="text"
-          android:background="@drawable/edittextstyle"
-          android:id="@+id/editText"
-      />
+        <EditText
+            android:hint="Email"
+            android:layout_width="280dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="60dp"
+            android:paddingLeft="22dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:textColor="#757575"
+            android:textColorHint="#757575"
+            android:layout_marginBottom="6dp"
+            android:inputType="text"
+            android:background="@drawable/edittextstyle"
+            android:id="@+id/editText"
+            />
 
-      <EditText
-          android:hint="Password"
-          android:textColorHint="#757575"
-          android:layout_width="280dp"
-          android:textColor="#757575"
-          android:paddingLeft="22dp"
-          android:layout_height="43dp"
-          android:layout_marginBottom="10dp"
-          android:layout_gravity="center_vertical|center_horizontal"
-          android:background="@drawable/edittextstyle"
-          android:inputType="textPassword"
-          android:id="@+id/text3"
-      />
-    <Button
-        android:text="SIGN IN"
-        android:layout_gravity="center_vertical|center_horizontal"        android:textColor="#ffff"
-        android:elevation="10dp"
-        android:background="@drawable/editextlogin"
-        android:layout_width="280dp"
-        android:layout_height="wrap_content"
-        android:onClick="onclick"
-        />
+        <EditText
+            android:hint="Password"
+            android:textColorHint="#757575"
+            android:layout_width="280dp"
+            android:textColor="#757575"
+            android:paddingLeft="22dp"
+            android:layout_height="43dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:background="@drawable/edittextstyle"
+            android:inputType="textPassword"
+            android:id="@+id/text3"
+            />
+        <Button
+            android:text="SIGN IN"
+            android:layout_gravity="center_vertical|center_horizontal"        android:textColor="#ffff"
+            android:elevation="10dp"
+            android:background="@drawable/editextlogin"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:onClick="onclick"
+            />
 
-</LinearLayout>
+    </LinearLayout>
 
 
 
