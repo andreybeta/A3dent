@@ -12,6 +12,7 @@
         android:layout_height="fill_parent" />
 
 <LinearLayout
+    android:background="#D9000000"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
@@ -19,133 +20,69 @@
 
     <ImageView
         android:src="@drawable/dent"
-        android:layout_width="fill_parent"
+        android:layout_width="250dp"
         android:layout_height="150dp"
-        android:layout_marginTop="90dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginRight="60dp"
-        android:layout_marginBottom="60dp"
-        android:gravity="center"
-        android:id="@+id/imageView" />
-  <RelativeLayout
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content">
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:id="@+id/imageView"
+        android:focusable="false" />
+
       <EditText
-          android:layout_width="fill_parent"
-          android:layout_height="40dp"
-          android:layout_marginLeft="40dp"
-          android:paddingLeft="4dp"
-          android:layout_marginRight="40dp"
-          android:drawableLeft="@drawable/usuicos"
-          android:textColor="#fefefefe"
-          android:textColorHint="#fefefefe"
-          android:ems="20"
+          android:hint="Email"
+          android:layout_width="280dp"
+          android:layout_height="43dp"
+          android:layout_marginTop="60dp"
+          android:paddingLeft="22dp"
+          android:layout_gravity="center_vertical|center_horizontal"
+          android:textColor="#757575"
+          android:textColorHint="#757575"
+          android:layout_marginBottom="6dp"
           android:inputType="text"
-          android:background="#99000000"
+          android:background="@drawable/edittextstyle"
           android:id="@+id/editText"
+      />
 
-          />
       <EditText
-          android:layout_width="fill_parent"
-          android:layout_height="40dp"
-          android:layout_marginLeft="40dp"
-          android:paddingLeft="42dp"
-          android:background="#99303030"
-
-          android:layout_marginRight="40dp"
-          android:hint="party.garbage"
-          android:textColor="#fefefefe"
-          android:textColorHint="#fefefefe"
-          android:ems="20"
-          android:inputType="text"
-          android:id="@+id/edi"
-
-          />
-
-      </RelativeLayout>
-
-      <RelativeLayout
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content">
-
-          <EditText
-              android:textColorHint="#CFCFCF"
-              android:layout_width="fill_parent"
-              android:layout_height="40dp"
-              android:layout_marginTop="1dp"
-              android:layout_marginLeft="40dp"
-              android:layout_marginRight="40dp"
-              android:layout_marginBottom="25dp"
-              android:drawableLeft="@drawable/icos"
-              android:background="#99000000"
-              android:inputType="textPassword"
-              android:id="@+id/editText2"
-              />
-          <EditText
           android:hint="Password"
-          android:textColorHint="#CFCFCF"
-          android:layout_width="fill_parent"
-          android:paddingLeft="42dp"
-          android:layout_height="40dp"
-          android:layout_marginTop="1dp"
-          android:layout_marginLeft="40dp"
-          android:layout_marginRight="40dp"
-          android:layout_marginBottom="25dp"
-          android:background="#99303030"
+          android:textColorHint="#757575"
+          android:layout_width="280dp"
+          android:textColor="#757575"
+          android:paddingLeft="22dp"
+          android:layout_height="43dp"
+          android:layout_marginBottom="10dp"
+          android:layout_gravity="center_vertical|center_horizontal"
+          android:background="@drawable/edittextstyle"
           android:inputType="textPassword"
           android:id="@+id/text3"
-          />
-
-
-          </RelativeLayout>
-
-
-    <ImageButton
-        android:src="@drawable/abc_btn_check_to_on_mtrl_015"
-        android:layout_width="fill_parent"
-        android:gravity="center"
-        android:elevation="5dp"
-        android:background="@drawable/ripple"
-        android:scaleType="fitXY"
-        android:layout_marginLeft="160dp"
-        android:layout_marginRight="160dp"
-        android:layout_marginBottom="2dp"
+      />
+    <Button
+        android:text="SIGN IN"
+        android:layout_gravity="center_vertical|center_horizontal"        android:textColor="#ffff"
+        android:elevation="10dp"
+        android:background="@drawable/editextlogin"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
         android:onClick="onclick"
-        android:layout_height="60dp" />
-
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="link"
-            android:id="@+id/textView"
-            android:autoLink="web" />
-        <EditText
-            android:hint="Sign In wiht Facebook"
-            android:textColorHint="#fefefefe"
-            android:textAlignment="center"
-            android:layout_width="fill_parent"
-            android:layout_height="40dp"
-            android:background="#99000000"
-            android:paddingLeft="42dp"
-
-            android:layout_marginBottom="1dp"
-            android:drawableRight="@drawable/right_arrow"
         />
-        <EditText
-            android:hint="New to Dent.co? Sign Up now!"
-            android:textColorHint="#CFCFCF"
-            android:autoLink="web"
-            android:layout_width="fill_parent"
-            android:layout_height="40dp"
-            android:paddingLeft="42dp"
 
-            android:drawableRight="@drawable/right_arrow"
-            android:background="#99000000"
-            android:layout_marginBottom="0dp"
+</LinearLayout>
 
-         />
-   </LinearLayout>
+
+
+    <EditText
+        android:hint="New to Dent.co? Sign Up now!"
+        android:textColorHint="#757575"
+        android:textColor="#757575"
+
+        android:autoLink="web"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="42dp"
+        android:layout_marginBottom="1dp"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:drawableRight="@drawable/right_arrow"
+        android:background="#79000000"
+        android:focusable="false" />
 
 </RelativeLayout>
