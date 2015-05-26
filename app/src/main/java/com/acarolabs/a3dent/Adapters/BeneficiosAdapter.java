@@ -65,7 +65,7 @@ public class BeneficiosAdapter extends RecyclerView.Adapter<BeneficiosAdapter.Vi
             super(itemView);
             imagen = (ImageView) itemView.findViewById(R.id.imageView);
             descripcion =(TextView) itemView.findViewById(R.id.txtDescripcion);
-            puntos =(TextView) itemView.findViewById(R.id.txtPuntos);
+            puntos =(TextView) itemView.findViewById(R.id.txtBeneficioPuntos);
 
 
         }
