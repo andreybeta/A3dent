@@ -32,6 +32,11 @@
             android:name=".Activities.notificationActivity"
             android:label="@string/title_activity_notification" >
         </activity>
+        <activity
+            android:name=".Activities.ContactActivity"
+            android:label="@string/title_activity_contact" >
+        </activity>
+
     </application>
 
 </manifest>
