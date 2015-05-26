@@ -2,13 +2,9 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <shape android:shape="oval">
-            <solid android:color="@color/accent"></solid>
+            <solid android:color="#01579B"></solid>
         </shape>
     </item>
-    <item>
-        <shape android:shape="rectangle">
-            <solid android:color="@color/accent"></solid>
-        </shape>
-    </item>
+
 
 </selector>
