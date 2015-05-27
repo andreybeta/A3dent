@@ -1,6 +1,6 @@
 package com.acarolabs.a3dent.Adapters;
 
-
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,6 +25,7 @@ public class RedimirAdapters extends RecyclerView.Adapter<RedimirAdapters.ViewHo
     public  RedimirAdapters(ArrayList<Redimir> redimirs,int itemLayout){
         this.redimirs = redimirs;
         this.itemLayout = itemLayout;
+
     }
 
     @Override
