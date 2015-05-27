@@ -29,11 +29,14 @@ public class PointsTask extends AsyncTask<Void, Void, ArrayList<Point>> {
     protected ArrayList<Point> doInBackground(Void... voids) {
 
 
-        ArrayList<Point> bene = new ArrayList<Point>();
-        bene.add(new Point(1, "Panomarica dental", "10", 10));
+        ArrayList<Point> points = new ArrayList<Point>();
+        points.add(new Point(1, "Panomarica dental", "10", 10));
+        points.add(new Point(1, "Radiografia maxo", "10", 10));
+        points.add(new Point(1, "Prueba 2", "10", 10));
 
 
-        return bene;
+
+        return points;
     }
 
     @Override

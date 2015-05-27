@@ -2,7 +2,8 @@ package com.acarolabs.a3dent.Fragments;
 
 
 import android.os.Bundle;
-import android.app.Fragment;
+
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -37,11 +38,18 @@ public class RedimirFragment extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+
+
+
+    }
+
+
+    public void setAdapter(String totalPoints,String point ,String service) {
         ArrayList<Redimir> redimirArrayList = new ArrayList<>();
         Redimir redimir = new Redimir();
-        redimir.setPoint("50");
-        redimir.setAux("10");
-        redimir.setText("Redimir en ...........................");
+        redimir.setPoint(totalPoints);
+        redimir.setAux(point);
+        redimir.setText("Redimir en "+service);
         redimirArrayList.add(redimir);
         RecyclerView recyclerView = (RecyclerView) getActivity().findViewById(R.id.my_recycler_view_redimir);
         recyclerView.setHasFixedSize( true);
@@ -50,7 +58,6 @@ public class RedimirFragment extends Fragment {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
     }
-
 
 
 

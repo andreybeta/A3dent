@@ -5,6 +5,12 @@
      tools:context="com.acarolabs.a3dent.Activities.RedimirActivity">
 
 
+    <include
+        layout="@layout/toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        />
+
 
     <fragment
         android:id="@+id/fragmentRedimir"
