@@ -43,6 +43,7 @@ public class BeneficiosAdapter extends RecyclerView.Adapter<BeneficiosAdapter.Vi
 
         Beneficios beneficio =listaBeneficios.get(position);
 
+        holder.imagen.setImageBitmap(beneficio.getImagen());
         holder.descripcion.setText(beneficio.getBeneficios() );
         holder.puntos.setText(beneficio.getPuntos());
         holder.itemView.setTag(beneficio);
@@ -59,6 +60,7 @@ public class BeneficiosAdapter extends RecyclerView.Adapter<BeneficiosAdapter.Vi
         public ImageView imagen;
         public TextView descripcion;
         public TextView puntos;
+
         public Beneficios propiedades;
 
         public ViewHolder(View itemView){
@@ -66,6 +68,7 @@ public class BeneficiosAdapter extends RecyclerView.Adapter<BeneficiosAdapter.Vi
             imagen = (ImageView) itemView.findViewById(R.id.imageView);
             descripcion =(TextView) itemView.findViewById(R.id.txtDescripcion);
             puntos =(TextView) itemView.findViewById(R.id.txtBeneficioPuntos);
+
 
 
         }
