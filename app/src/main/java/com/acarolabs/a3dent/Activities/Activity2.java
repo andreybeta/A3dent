@@ -1,6 +1,7 @@
 package com.acarolabs.a3dent.Activities;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 
 
@@ -130,13 +131,27 @@ public class Activity2 extends ActionBarActivity implements MaterialTabListener 
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+        switch (id){
+            case R.id.action_settings:
+                return true;
+            case R.id.action_contact:
+                Intent intent = new Intent(this,ContactActivity.class);
+                startActivity(intent);
+                return true;
+            case R.id.action_profile:
+                return true;
+            case R.id.action_quit:
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+
         }
 
-        return super.onOptionsItemSelected(item);
+
+
+
     }
 
     @Override
