@@ -7,6 +7,8 @@
     android:id="@+id/card_view_redimir"
     android:layout_margin="8dp"
     android:layout_gravity="left"
+    android:elevation="100dp"
+
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     card_view:cardCornerRadius="20dp">
