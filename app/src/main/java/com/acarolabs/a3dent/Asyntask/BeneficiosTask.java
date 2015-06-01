@@ -40,7 +40,7 @@ public class BeneficiosTask extends AsyncTask<Void,Void,ArrayList<Beneficios>>{
         ArrayList<Beneficios> bene = new ArrayList<Beneficios>() ;
         try {
 
-            imageUrl = new URL("http://www.innovus.center/images/logofull.jpg");
+            imageUrl = new URL("http://3dent.acarolabs.com/vendor/nova-theme/images/logo.png");
             conn = (HttpURLConnection) imageUrl.openConnection();
             conn.connect();
 
