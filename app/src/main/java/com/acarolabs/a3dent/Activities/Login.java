@@ -20,10 +20,9 @@ public class Login extends ActionBarActivity {
 
 
     public void onclick(View view){
-
-
         Intent intent = new Intent(this,Activity2.class);
         startActivity(intent);
+        finish();
     }
 
 }
