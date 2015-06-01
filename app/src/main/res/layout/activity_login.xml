@@ -6,13 +6,12 @@
     tools:context="com.acarolabs.a3dent.Login">
 
     <ImageView
-        android:src="@drawable/dos"
         android:scaleType="fitXY"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent" />
+        android:layout_height="fill_parent"
+        android:src="@drawable/login_background" />
 
     <LinearLayout
-        android:background="#D9000000"
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
@@ -28,7 +27,7 @@
             android:focusable="false" />
 
         <EditText
-            android:hint="Email"
+            android:hint="Correo electrónico"
             android:layout_width="280dp"
             android:layout_height="43dp"
             android:layout_marginTop="60dp"
@@ -43,7 +42,7 @@
             />
 
         <EditText
-            android:hint="Password"
+            android:hint="Contraseña"
             android:textColorHint="#757575"
             android:layout_width="280dp"
             android:textColor="#757575"
@@ -70,9 +69,9 @@
 
 
     <EditText
-        android:hint="New to Dent.co? Sign Up now!"
-        android:textColorHint="#757575"
-        android:textColor="#757575"
+        android:hint="Recordar contraseña"
+        android:textColorHint="#ffffff"
+        android:textColor="#ffffff"
 
         android:autoLink="web"
         android:layout_width="match_parent"
