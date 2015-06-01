@@ -1,5 +1,7 @@
 package com.acarolabs.a3dent.Models;
 
+import android.graphics.Bitmap;
+
 import java.net.URL;
 
 /**
@@ -8,9 +10,9 @@ import java.net.URL;
 public class Beneficios {
     private String beneficios;
     private String puntos;
-    private String imagen;
+    private Bitmap imagen;
 
-    public Beneficios(String beneficios, String puntos, String imagen) {
+    public Beneficios(String beneficios, String puntos, Bitmap imagen) {
 
         this.beneficios = beneficios;
         this.puntos = puntos;
@@ -32,11 +34,11 @@ public class Beneficios {
         this.puntos = puntos;
     }
 
-    public String getImagen() {
+    public Bitmap getImagen() {
         return imagen;
     }
 
-    public void setImagen(String imagen) {
+    public void setImagen(Bitmap imagen) {
         this.imagen = imagen;
     }
 
