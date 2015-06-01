@@ -10,11 +10,7 @@
         android:layout_gravity="center|top"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
-        <ImageView
-            android:src="@drawable/oficinas"
-            android:scaleType="centerCrop"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent" />
+
         <LinearLayout
             android:layout_alignParentTop="true"
             android:layout_gravity="center|top"
@@ -31,14 +27,7 @@
         </LinearLayout>
 
 
-        <LinearLayout
-            android:background="#bf303030"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
-
-            </LinearLayout>
-
-        </RelativeLayout>
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_alignParentLeft="true"

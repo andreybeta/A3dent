@@ -25,10 +25,11 @@
 
         <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="fill_parent"
             android:src="@mipmap/ic_launcher"
             android:id="@+id/imageView"
-            android:layout_weight="2" />
+            android:layout_weight="2"
+            android:scaleType="fitCenter" />
 
         <TextView
             android:layout_width="wrap_content"
