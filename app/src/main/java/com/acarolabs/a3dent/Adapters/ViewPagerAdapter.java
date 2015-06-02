@@ -4,8 +4,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.acarolabs.a3dent.Fragments.Tab1Fragment;
-import com.acarolabs.a3dent.Fragments.Tab2Fragment;
+import com.acarolabs.a3dent.Fragments.RewardsFragment;
+import com.acarolabs.a3dent.Fragments.PointsFragment;
 
 /**
  * Created by personal on 21/05/15.
@@ -30,7 +30,7 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
         if(position == 0) // if the position is 0 we are returning the First tab
         {
-            Tab1Fragment tab1 = new Tab1Fragment();
+            RewardsFragment tab1 = new RewardsFragment();
             return tab1;
 
 
@@ -38,7 +38,7 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
         }
         else             // As we are having 2 tabs if the position is now 0 it must be 1 so we are returning second tab
         {
-            Tab2Fragment tab2 = new Tab2Fragment();
+            PointsFragment tab2 = new PointsFragment();
             return tab2;
 
         }

@@ -1,9 +1,11 @@
 package com.acarolabs.a3dent.Fragments;
 
+/**
+ * Created by personal on 21/05/15.
+ */
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -11,60 +13,48 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.acarolabs.a3dent.Adapters.BeneficiosAdapter;
-import com.acarolabs.a3dent.Asyntask.BeneficiosTask;
-import com.acarolabs.a3dent.Models.Beneficios;
+import com.acarolabs.a3dent.Adapters.PointsAdapter;
+import com.acarolabs.a3dent.Asyntask.PointsTask;
+import com.acarolabs.a3dent.Models.Point;
+
 import com.acarolabs.a3dent.R;
 
 import java.util.ArrayList;
-import java.util.List;
 
+public class PointsFragment extends Fragment {
 
-/**
- * Created by hp1 on 21-01-2015.
- */
-public class Tab1Fragment extends android.support.v4.app.Fragment {
-
-    BeneficiosAdapter beneficiosAdapter;
+    PointsAdapter PointsAdapter;
     RecyclerView recyclerView;
 
-    public Tab1Fragment(){
+    public PointsFragment(){
 
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v =inflater.inflate(R.layout.tab_1,container,false);
+        View v =inflater.inflate(R.layout.tab_point,container,false);
         return v;
     }
     @Override
     public void onActivityCreated(Bundle savedInstanceState){
         super.onActivityCreated(savedInstanceState);
-        ArrayList<Beneficios> beneficiosArrayList = new ArrayList<Beneficios>();
-
-        //beneficiosArrayList.add(new Beneficios("hola","10","esta"));
+        ArrayList<Point> PointsArrayList = new ArrayList<Point>();
 
 
-        /*
-        creamos arraylist purbea
-         */
+        new PointsTask(this.getActivity()).execute();
 
-       // beneficiosArrayList.add(new Beneficios("hola","10","esta"));
-        new BeneficiosTask(this.getActivity()).execute();
-
-        recyclerView = (RecyclerView) getActivity().findViewById(R.id.my_recycler_view);
+        recyclerView = (RecyclerView) getActivity().findViewById(R.id.my_recycler_view_point);
         recyclerView.setHasFixedSize(true);//que todo lo optimize
         //crea adaptador
-        beneficiosAdapter = new BeneficiosAdapter(beneficiosArrayList,R.layout.row_beneficios,getActivity());
-        recyclerView.setAdapter(beneficiosAdapter);
+        PointsAdapter = new PointsAdapter(PointsArrayList,R.layout.row_points,getActivity());
+        recyclerView.setAdapter(PointsAdapter);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));//linear x q es lienas o si no tambn grillas
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
-        //new BeneficiosTask(this.getActivity()).execute();
+
 
 
 
     }
 }
-

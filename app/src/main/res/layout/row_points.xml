@@ -8,7 +8,7 @@
     android:foreground="?android:attr/selectableItemBackground"
     android:clickable="true"
     android:layout_margin="1dp"
-    android:id="@+id/card_view_puntos"
+    android:id="@+id/card_view_points"
     android:background="@color/fondo"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"

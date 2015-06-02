@@ -11,7 +11,6 @@ import android.widget.TextView;
 
 import com.acarolabs.a3dent.Activities.RedimirActivity;
 import com.acarolabs.a3dent.Models.Point;
-import com.acarolabs.a3dent.Models.Redimir;
 import com.acarolabs.a3dent.R;
 
 import java.util.ArrayList;
@@ -22,13 +21,13 @@ import java.util.ArrayList;
 public class PointsAdapter extends RecyclerView.Adapter<PointsAdapter.ViewHolder> {
 
     public static Activity activity;
-    public static ArrayList<Point> listaPoint;
+    public static ArrayList<Point> listPoint;
     private int itemLayout;
 
     public PointsAdapter(ArrayList<Point> data, int itemLayout, Activity activity) {
         super();
         this.itemLayout = itemLayout;
-        this.listaPoint = data;
+        this.listPoint = data;
         this.activity = activity;
     }
 
@@ -44,31 +43,31 @@ public class PointsAdapter extends RecyclerView.Adapter<PointsAdapter.ViewHolder
     @Override
     public void onBindViewHolder(PointsAdapter.ViewHolder holder, int position) {
 
-        Point point = listaPoint.get(position);
-        holder.descripcion.setText(point.getService());
-        holder.puntos.setText(Integer.toString(point.getPoints()));
+        Point point = listPoint.get(position);
+        holder.description.setText(point.getService());
+        holder.points.setText(Integer.toString(point.getPoints()));
         holder.itemView.setTag(point);
-        holder.propiedades = point;
+        holder.properties = point;
 
 
     }
 
     @Override
     public int getItemCount() {
-        return listaPoint.size();
+        return listPoint.size();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        public ImageView imagen;
-        public TextView descripcion;
-        public TextView puntos;
-        public Point propiedades;
+        public ImageView image;
+        public TextView description;
+        public TextView points;
+        public Point properties;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            imagen = (ImageView) itemView.findViewById(R.id.imageViewPoints);
-            descripcion = (TextView) itemView.findViewById(R.id.txtDescribePoints);
-            puntos = (TextView) itemView.findViewById(R.id.txtPointsPoints);
+            image = (ImageView) itemView.findViewById(R.id.imageViewPoints);
+            description = (TextView) itemView.findViewById(R.id.txtDescribePoints);
+            points = (TextView) itemView.findViewById(R.id.txtPointsPoints);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -76,14 +75,14 @@ public class PointsAdapter extends RecyclerView.Adapter<PointsAdapter.ViewHolder
                     // Intent i = new Inten
                     Intent i = new Intent (activity, RedimirActivity.class);
                     i.putExtra("total",getTotalPoints());
-                    i.putExtra("service",propiedades.getService());
-                    i.putExtra("point",propiedades.getPoints());
+                    i.putExtra("service", properties.getService());
+                    i.putExtra("point", properties.getPoints());
 
-                    //i.putExtra("nombre", propiedades.getNombreEmpresa());
+                    //i.putExtra("nombre", properties.getNombreEmpresa());
                     activity.startActivity(i);
 
 
-                    // Toast.makeText(view.getContext(),"llave de consulta: "+ propiedades.getWebsafeKey(),Toast.LENGTH_SHORT).show();
+                    // Toast.makeText(view.getContext(),"llave de consulta: "+ properties.getWebsafeKey(),Toast.LENGTH_SHORT).show();
                 }
             });
 
@@ -93,8 +92,8 @@ public class PointsAdapter extends RecyclerView.Adapter<PointsAdapter.ViewHolder
     }
     public static  int getTotalPoints(){
         int total = 0;
-        for (int i = 0; i < listaPoint.size(); i++) {
-            total += listaPoint.get(i).getPoints();
+        for (int i = 0; i < listPoint.size(); i++) {
+            total += listPoint.get(i).getPoints();
         }
         return total;
     }
