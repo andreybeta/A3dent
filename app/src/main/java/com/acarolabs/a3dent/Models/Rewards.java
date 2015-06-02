@@ -2,44 +2,63 @@ package com.acarolabs.a3dent.Models;
 
 import android.graphics.Bitmap;
 
-import java.net.URL;
-
 /**
  * Created by personal on 21/05/15.
  */
 public class Rewards {
-    private String beneficios;
-    private String puntos;
-    private Bitmap imagen;
+    private int idRewards;
+    private String nameRewards;
+    private int pointsRewards;
+    private String descriptionRewards;
+   // private Bitmap imagen;
+   public Rewards(int idRewards,String nameRewards, String descriptionRewards, int pointsRewards) {
+       this.idRewards = idRewards;
 
-    public Rewards(String beneficios, String puntos, Bitmap imagen) {
+       this.nameRewards = nameRewards;
+       this.descriptionRewards = descriptionRewards;
+       this.pointsRewards = pointsRewards;
+       // this.imagen = imagen;
+   }
 
-        this.beneficios = beneficios;
-        this.puntos = puntos;
-        this.imagen = imagen;
-    }
-    public String getBeneficios() {
-        return beneficios;
-    }
-
-    public void setBeneficios(String beneficios) {
-        this.beneficios = beneficios;
-    }
-
-    public String getPuntos() {
-        return puntos;
+    public String getDescriptionRewards() {
+        return descriptionRewards;
     }
 
-    public void setPuntos(String puntos) {
-        this.puntos = puntos;
+    public void setDescriptionRewards(String descriptionRewards) {
+        this.descriptionRewards = descriptionRewards;
     }
 
-    public Bitmap getImagen() {
+    public int getIdRewards() {
+        return idRewards;
+    }
+
+    public void setIdRewards(int idRewards) {
+        this.idRewards = idRewards;
+    }
+
+
+    public String getNameRewards() {
+        return nameRewards;
+    }
+
+    public void setNameRewards(String nameRewards) {
+        this.nameRewards = nameRewards;
+    }
+
+    public int getPointsRewards() {
+        return pointsRewards;
+    }
+
+    public void setPointsRewards(int pointsRewards) {
+        this.pointsRewards = pointsRewards;
+    }
+
+    /*public Bitmap getImagen() {
         return imagen;
     }
 
     public void setImagen(Bitmap imagen) {
         this.imagen = imagen;
-    }
+    }*/
 
 }

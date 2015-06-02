@@ -69,6 +69,7 @@ public class PointsAdapter extends RecyclerView.Adapter<PointsAdapter.ViewHolder
             description = (TextView) itemView.findViewById(R.id.txtDescribePoints);
             points = (TextView) itemView.findViewById(R.id.txtPointsPoints);
 
+            /*
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -86,6 +87,7 @@ public class PointsAdapter extends RecyclerView.Adapter<PointsAdapter.ViewHolder
                 }
             });
 
+*/
 
         }
 
