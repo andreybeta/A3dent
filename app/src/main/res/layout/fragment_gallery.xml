@@ -1,0 +1,161 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="10dp"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    >
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_marginTop="16dp"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent">
+
+   <TextView
+       android:text="January"
+       android:gravity="center"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/my_recycler_view_January"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:scrollbars="horizontal"
+        android:background="#ffff00"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        tools:context="com.acarolabs.a3dent.Fragments.GalleryFragment"/>
+    <TextView
+        android:text="February"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/my_recycler_view_February"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scrollbars="horizontal"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        tools:context="com.acarolabs.a3dent.Fragments.GalleryFragment"/>
+    <TextView
+        android:text="March"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/my_recycler_view_March"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scrollbars="horizontal"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        tools:context="com.acarolabs.a3dent.Fragments.GalleryFragment"/>
+    <TextView
+        android:text="April"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/my_recycler_view_April"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scrollbars="horizontal"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        tools:context="com.acarolabs.a3dent.Fragments.GalleryFragment"/>
+    <TextView
+        android:text="May"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/my_recycler_view_May"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scrollbars="horizontal"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        tools:context="com.acarolabs.a3dent.Fragments.GalleryFragment"/>
+    <TextView
+        android:text="June"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/my_recycler_view_June"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scrollbars="horizontal"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        tools:context="com.acarolabs.a3dent.Fragments.GalleryFragment"/>
+    <TextView
+        android:text="July"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/my_recycler_view_July"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scrollbars="horizontal"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        tools:context="com.acarolabs.a3dent.Fragments.GalleryFragment"/>
+    <TextView
+        android:text="August"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/my_recycler_view_August"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scrollbars="horizontal"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        tools:context="com.acarolabs.a3dent.Fragments.GalleryFragment"/>
+    <TextView
+        android:text="September"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/my_recycler_view_September"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scrollbars="horizontal"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        tools:context="com.acarolabs.a3dent.Fragments.GalleryFragment"/>
+    <TextView
+        android:text="October"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/my_recycler_view_October"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scrollbars="horizontal"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        tools:context="com.acarolabs.a3dent.Fragments.GalleryFragment"/>
+    <TextView
+        android:text="November"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/my_recycler_view_November"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scrollbars="horizontal"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        tools:context="com.acarolabs.a3dent.Fragments.GalleryFragment"/>
+    <TextView
+        android:text="December"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/my_recycler_view_December"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scrollbars="horizontal"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        tools:context="com.acarolabs.a3dent.Fragments.GalleryFragment"/>
+</LinearLayout>
+
+</ScrollView>

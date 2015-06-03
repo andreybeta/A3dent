@@ -1,12 +1,15 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.acarolabs.a3dent.Activities.notificationActivity">
+
+    tools:context="com.acarolabs.a3dent.Activities.GalleryActivity">
+
+
 
     <fragment
         android:id="@+id/fragmentNotification"
-        android:name="com.acarolabs.a3dent.Fragments.NotificationFragment"
+        android:name="com.acarolabs.a3dent.Fragments.GalleryFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
