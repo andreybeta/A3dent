@@ -3,6 +3,7 @@
     package="com.acarolabs.a3dent" >
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -37,7 +38,17 @@
             android:name=".Activities.ContactActivity"
             android:label="@string/title_activity_contact" >
         </activity>
-
+        <activity
+            android:name=".Activities.ProfilesActivity"
+            android:label="@string/title_activity_profiles" >
+        </activity>
+        <activity
+            android:name=".Activities.SaveProfileActivity"
+            android:label="@string/title_activity_save_profile" >
+        </activity>
+        <activity
+            android:name=".Activities.GalleryActivity"
+            android:label="@string/title_activity_gallery" >
+        </activity>
     </application>
-
 </manifest>

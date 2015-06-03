@@ -16,5 +16,10 @@
     <string name="profile">Perfil</string>
     <string name="quit">Salir</string>
 
+    <string name="title_activity_profiles">ProfilesActivity</string>
+    <string name="title_activity_save_profile">SaveProfileActivity</string>
+    <string name="title_activity_gallery">GalleryActivity</string>
+    <string name="title_activity_">Activity</string>
+
 
 </resources>
