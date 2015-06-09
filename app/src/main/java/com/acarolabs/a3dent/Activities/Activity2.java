@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
+import com.acarolabs.a3dent.Fragments.GalleryFragment;
 import com.acarolabs.a3dent.Fragments.RewardsFragment;
 import com.acarolabs.a3dent.Fragments.PointsFragment;
 import com.acarolabs.a3dent.R;
@@ -45,6 +46,7 @@ public class Activity2 extends ActionBarActivity implements MaterialTabListener 
                 getSupportFragmentManager(), FragmentPagerItems.with(this)
                 .add(R.string.rewards, RewardsFragment.class)
                 .add(R.string.points, PointsFragment.class)
+                //.add("Galeria", GalleryFragment.class)
                 .create());
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
