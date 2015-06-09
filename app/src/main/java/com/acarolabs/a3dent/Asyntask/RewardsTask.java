@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
 import com.acarolabs.a3dent.Adapters.RewardsAdapter;
+import com.acarolabs.a3dent.AppConstants;
 import com.acarolabs.a3dent.Models.Rewards;
 import com.acarolabs.a3dent.R;
 
@@ -23,7 +24,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.List;
+import com.acarolabs.a3dent.AppConstants.*;
 
 /**
  * Created by personal on 21/05/15.
@@ -50,15 +51,16 @@ public class RewardsTask extends AsyncTask<Void, Void, ArrayList<Rewards>> {
         // Will contain the raw JSON response as a string.
         String forecastJsonStr = null;
 
-
+/*
         ArrayList<Rewards> rewardsTemp = new ArrayList<Rewards>();
         rewardsTemp.add(new Rewards(1,"Panomarica dental","kdfkdfkfdkfdk",10));
         rewardsTemp.add(new Rewards(1,"Panomarica dental","kdfkdfkfdkfdk",10));
         rewardsTemp.add(new Rewards(1,"Panomarica dental","kdfkdfkfdkfdk",10));
 
-        return rewardsTemp;
-        /*try {
-            URL url = new URL("http://3dent.acarolabs.com/api/v1/rewards");
+        return rewardsTemp;*/
+        try {
+
+            URL url = new URL(AppConstants.serverUrl +"api/v1/rewards"+"?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXUyJ9.eyJzdWIiOjQ4LCJpc3MiOiJodHRwOlwvXC8zZGVudC5hY2Fyb2xhYnMuY29tXC9hcGlcL3YxXC9hdXRoIiwiaWF0IjoiMTQzMzg4NzUxNSIsImV4cCI6IjE0MzM4OTExMTUiLCJuYmYiOiIxNDMzODg3NTE1IiwianRpIjoiYTMyOGViMTk1NjRiZDE0Mzc4ODQ4NDMzMzE1NTk2NWIifQ.ZDU1ZTQ0MzBjZjlkMmRiMzdiZTIyNTVjYzJjN2Q0OGQ5OWZjMGFhMmU1NTU2YjY3MDVmZTM3MGEzYWViZjlhMw");
 
             // Create the request to OpenWeatherMap, and open the connection
             urlConnection = (HttpURLConnection) url.openConnection();
@@ -113,7 +115,7 @@ public class RewardsTask extends AsyncTask<Void, Void, ArrayList<Rewards>> {
             e.printStackTrace();
         }
         return null;
-        */
+
     }
 
 
@@ -169,11 +171,11 @@ public class RewardsTask extends AsyncTask<Void, Void, ArrayList<Rewards>> {
 
         ArrayList<Rewards> rewardsTemp = new ArrayList<Rewards>();
 
-        JSONObject mJsonObject = new JSONObject(jsonStr);
-       /* JSONArray mJsonArray = new JSONArray(jsonStr);
-        JSONObject mJsonObject = mJsonArray.getJSONObject(0);*/
+        //JSONObject mJsonObject = new JSONObject(jsonStr);
+        JSONArray mJsonArrayProperty = new JSONArray(jsonStr);
+        //JSONObject mJsonObject = mJsonArray.getJSONObject(0);
 
-        JSONArray mJsonArrayProperty = mJsonObject.getJSONArray("data");
+       // JSONArray mJsonArrayProperty = mJsonObject.getJSONArray("data");
         for (int i = 0; i < mJsonArrayProperty.length(); i++) {
             JSONObject rewardsJson = mJsonArrayProperty.getJSONObject(i);
 
@@ -188,14 +190,7 @@ public class RewardsTask extends AsyncTask<Void, Void, ArrayList<Rewards>> {
 
 
         }
-
-
-        //for (int i = 0)
-
-        //JSONObject nombre = enlace.getJSONObject("titulo");
         return rewardsTemp;
-        //return nombre.toString();
-
 
     }
 }

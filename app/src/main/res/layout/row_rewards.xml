@@ -11,21 +11,21 @@
     android:layout_width="300dp"
     android:layout_height="320dp"
     android:layout_gravity="center_horizontal"
-
+    card_view:cardPreventCornerOverlap="false"
     card_view:cardCornerRadius="2dp"
     card_view:cardElevation="10dp">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/imgdefect"
+        android:src="@drawable/imagedefect"
         android:scaleType="centerCrop"/>
 
     <TextView
         android:id="@+id/txtRewardsDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
+        android:padding="7dp"
         android:text="Aliquid magnam in magnam impedit reprehenderit quod non."
         android:layout_gravity="bottom"
         android:background="#8c000000"
@@ -43,10 +43,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:textSize="30sp"
-
-
             android:layout_gravity="right"
             android:gravity="right"
             android:text="8762"
