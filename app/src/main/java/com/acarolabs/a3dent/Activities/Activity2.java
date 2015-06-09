@@ -62,6 +62,8 @@ public class Activity2 extends ActionBarActivity implements MaterialTabListener 
                 getSupportFragmentManager(), FragmentPagerItems.with(this)
                 .add(R.string.rewards, RewardsFragment.class)
                 .add(R.string.points, PointsFragment.class)
+                //.add("Galeria",GalleryFragment.class)
+
                 //.add("Galeria", GalleryFragment.class)
                 .create());
 
