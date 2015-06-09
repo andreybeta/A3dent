@@ -1,29 +1,41 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_margin="10dp"
+    android:background="#e1f5fe"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="fill_parent"
     >
 <LinearLayout
     android:orientation="vertical"
-    android:layout_marginTop="16dp"
     android:layout_width="fill_parent"
     android:layout_height="match_parent">
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangulo"
+            android:layout_margin="8dp">
+            <TextView
+                android:text="January"
+                android:gravity="center"
+                android:layout_marginBottom="3dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
 
-   <TextView
-       android:text="January"
-       android:gravity="center"
-       android:layout_width="fill_parent"
-       android:layout_height="wrap_content" />
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/my_recycler_view_January"
+            <android.support.v7.widget.RecyclerView
+                android:layout_marginTop="8dp"
+                android:id="@+id/my_recycler_view_January"
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:scrollbars="horizontal"
+                android:scrollbarAlwaysDrawHorizontalTrack="true"
+                tools:context="com.acarolabs.a3dent.Fragments.GalleryFragment"/>
+        </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
         android:layout_width="wrap_content"
-        android:layout_height="300dp"
-        android:scrollbars="horizontal"
-        android:background="#ffff00"
-        android:scrollbarAlwaysDrawHorizontalTrack="true"
-        tools:context="com.acarolabs.a3dent.Fragments.GalleryFragment"/>
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangulo"
+        android:layout_margin="8dp">
     <TextView
         android:text="February"
         android:gravity="center"
@@ -36,6 +48,8 @@
         android:scrollbars="horizontal"
         android:scrollbarAlwaysDrawHorizontalTrack="true"
         tools:context="com.acarolabs.a3dent.Fragments.GalleryFragment"/>
+    </android.support.v7.widget.CardView>
+
     <TextView
         android:text="March"
         android:gravity="center"
@@ -68,6 +82,7 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/my_recycler_view_May"
         android:layout_width="match_parent"
+
         android:layout_height="300dp"
         android:scrollbars="horizontal"
         android:scrollbarAlwaysDrawHorizontalTrack="true"

@@ -26,6 +26,8 @@
             android:id="@+id/imageViewRewards"
             android:focusable="false" />
 
+
+
         <EditText
             android:hint="Correo electrónico"
             android:layout_width="280dp"
@@ -38,7 +40,7 @@
             android:layout_marginBottom="6dp"
             android:inputType="text"
             android:background="@drawable/edittextstyle"
-            android:id="@+id/editText"
+            android:id="@+id/txtEmailLogin"
             />
 
         <EditText
@@ -51,8 +53,7 @@
             android:layout_marginBottom="10dp"
             android:layout_gravity="center_vertical|center_horizontal"
             android:background="@drawable/edittextstyle"
-            android:inputType="textPassword"
-            android:id="@+id/text3"
+            android:id="@+id/txtPasswordLogin"
             />
         <Button
             android:text="SIGN IN"
