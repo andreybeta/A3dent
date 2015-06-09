@@ -52,7 +52,12 @@ public class RewardsTask extends AsyncTask<Void, Void, ArrayList<Rewards>> {
 
 
         ArrayList<Rewards> rewardsTemp = new ArrayList<Rewards>();
-        try {
+        rewardsTemp.add(new Rewards(1,"Panomarica dental","kdfkdfkfdkfdk",10));
+        rewardsTemp.add(new Rewards(1,"Panomarica dental","kdfkdfkfdkfdk",10));
+        rewardsTemp.add(new Rewards(1,"Panomarica dental","kdfkdfkfdkfdk",10));
+
+        return rewardsTemp;
+        /*try {
             URL url = new URL("http://3dent.acarolabs.com/api/v1/rewards");
 
             // Create the request to OpenWeatherMap, and open the connection
@@ -108,6 +113,7 @@ public class RewardsTask extends AsyncTask<Void, Void, ArrayList<Rewards>> {
             e.printStackTrace();
         }
         return null;
+        */
     }
 
 
