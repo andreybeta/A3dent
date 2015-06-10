@@ -4,9 +4,12 @@ import android.app.Activity;
 
 import android.os.AsyncTask;
 import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.Display;
 
 import com.acarolabs.a3dent.Adapters.RewardsAdapter;
 import com.acarolabs.a3dent.AppConstants;
@@ -60,7 +63,7 @@ public class RewardsTask extends AsyncTask<Void, Void, ArrayList<Rewards>> {
         return rewardsTemp;*/
         try {
 
-            URL url = new URL(AppConstants.serverUrl +"api/v1/rewards"+"?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXUyJ9.eyJzdWIiOjQ4LCJpc3MiOiJodHRwOlwvXC8zZGVudC5hY2Fyb2xhYnMuY29tXC9hcGlcL3YxXC9hdXRoIiwiaWF0IjoiMTQzMzg4NzUxNSIsImV4cCI6IjE0MzM4OTExMTUiLCJuYmYiOiIxNDMzODg3NTE1IiwianRpIjoiYTMyOGViMTk1NjRiZDE0Mzc4ODQ4NDMzMzE1NTk2NWIifQ.ZDU1ZTQ0MzBjZjlkMmRiMzdiZTIyNTVjYzJjN2Q0OGQ5OWZjMGFhMmU1NTU2YjY3MDVmZTM3MGEzYWViZjlhMw");
+            URL url = new URL(AppConstants.serverUrl +"api/v1/rewards"+"?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXUyJ9.eyJzdWIiOjQ4LCJpc3MiOiJodHRwOlwvXC8zZGVudC5hY2Fyb2xhYnMuY29tXC9hcGlcL3YxXC9hdXRoIiwiaWF0IjoiMTQzMzg5NDEwMiIsImV4cCI6IjE0MzM4OTc3MDIiLCJuYmYiOiIxNDMzODk0MTAyIiwianRpIjoiOTcyYWE4YWVlZmZiY2FlYzI1OTc5Y2RmYWUzZjBhOTMifQ.NWJhYzI5MzhkZjIzODQzMDI3YzgxMzVlNzQ3MTMyZjhiYzFjZWI4YWY5MWVkODZhYWM1NGYwZDQ1YWQ0NjlkOA");
 
             // Create the request to OpenWeatherMap, and open the connection
             urlConnection = (HttpURLConnection) url.openConnection();
@@ -160,11 +163,27 @@ public class RewardsTask extends AsyncTask<Void, Void, ArrayList<Rewards>> {
     @Override
     protected void onPostExecute(ArrayList<Rewards> result) {
 
+
         RecyclerView recyclerView = (RecyclerView) activity.findViewById(R.id.my_recycler_view_rewards);
         recyclerView.setHasFixedSize(true);//que todo lo optimize
         recyclerView.setAdapter(new RewardsAdapter(result, R.layout.row_rewards, activity));
-        recyclerView.setLayoutManager(new LinearLayoutManager(activity));//linear x q es lienas o si no tambn grillas
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        //////////
+
+
+
+        Display display = activity.getWindowManager().getDefaultDisplay();
+        DisplayMetrics outMetrics = new DisplayMetrics();
+        display.getMetrics(outMetrics);
+
+        float density  = activity.getResources().getDisplayMetrics().density;
+        float dpWidth  = outMetrics.widthPixels / density;
+        int columns = Math.round(dpWidth/300);
+        recyclerView.setLayoutManager(new GridLayoutManager(activity,columns));
+
+
+        /////
+      /*  recyclerView.setLayoutManager(new LinearLayoutManager(activity));//linear x q es lienas o si no tambn grillas
+        recyclerView.setItemAnimator(new DefaultItemAnimator());*/
     }
 
     public static ArrayList<Rewards> getListRewards(String jsonStr) throws JSONException {
@@ -193,4 +212,17 @@ public class RewardsTask extends AsyncTask<Void, Void, ArrayList<Rewards>> {
         return rewardsTemp;
 
     }
+    /*
+    public int av(){
+        Display display = activity.getWindowManager().getDefaultDisplay();
+        DisplayMetrics outMetrics = new DisplayMetrics();
+        display.getMetrics(outMetrics);
+
+        float density  = activity.getResources().getDisplayMetrics().density;
+        float dpWidth  = outMetrics.widthPixels / density;
+        int columns = Math.round(dpWidth/300);
+        mLayoutManager = new GridLayoutManager(getActivity(),columns);
+        mRecyclerView.setLayoutManager(mLayoutManager);
+    }
+    */
 }
