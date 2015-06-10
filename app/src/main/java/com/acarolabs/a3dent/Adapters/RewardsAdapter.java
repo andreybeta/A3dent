@@ -45,7 +45,15 @@ public class RewardsAdapter extends RecyclerView.Adapter<RewardsAdapter.ViewHold
         Rewards beneficio = listRewards.get(position);
         holder.description.setText(beneficio.getNameRewards());
         holder.points.setText(""+beneficio.getPointsRewards());
+        if(beneficio.getImgUrl().equals("null")){
+
+        }else{
+            holder.image.setImageBitmap(beneficio.getImage());
+
+        }
         holder.itemView.setTag(beneficio);
+
+
         holder.properties = beneficio;
 
 
@@ -65,7 +73,7 @@ public class RewardsAdapter extends RecyclerView.Adapter<RewardsAdapter.ViewHold
 
         public ViewHolder(View itemView){
             super(itemView);
-            image = (ImageView) itemView.findViewById(R.id.imageViewRewards);
+            image = (ImageView) itemView.findViewById(R.id.imgrewards);
             description =(TextView) itemView.findViewById(R.id.txtRewardsDescription);
             points =(TextView) itemView.findViewById(R.id.txtRewardsPoints);
 
