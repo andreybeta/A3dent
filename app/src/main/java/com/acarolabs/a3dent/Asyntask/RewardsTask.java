@@ -2,10 +2,12 @@ package com.acarolabs.a3dent.Asyntask;
 
 import android.app.Activity;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Rect;
 import android.os.AsyncTask;
-import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
+
 import android.support.v7.widget.RecyclerView;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -27,6 +29,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
+
 import com.acarolabs.a3dent.AppConstants.*;
 
 /**
@@ -63,7 +66,7 @@ public class RewardsTask extends AsyncTask<Void, Void, ArrayList<Rewards>> {
         return rewardsTemp;*/
         try {
 
-            URL url = new URL(AppConstants.serverUrl +"api/v1/rewards"+"?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXUyJ9.eyJzdWIiOjQ4LCJpc3MiOiJodHRwOlwvXC8zZGVudC5hY2Fyb2xhYnMuY29tXC9hcGlcL3YxXC9hdXRoIiwiaWF0IjoiMTQzMzg5NDEwMiIsImV4cCI6IjE0MzM4OTc3MDIiLCJuYmYiOiIxNDMzODk0MTAyIiwianRpIjoiOTcyYWE4YWVlZmZiY2FlYzI1OTc5Y2RmYWUzZjBhOTMifQ.NWJhYzI5MzhkZjIzODQzMDI3YzgxMzVlNzQ3MTMyZjhiYzFjZWI4YWY5MWVkODZhYWM1NGYwZDQ1YWQ0NjlkOA");
+            URL url = new URL(AppConstants.serverUrl + "api/v1/rewards" + "?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXUyJ9.eyJzdWIiOjQ4LCJpc3MiOiJodHRwOlwvXC8zZGVudC5hY2Fyb2xhYnMuY29tXC9hcGlcL3YxXC9hdXRoIiwiaWF0IjoiMTQzMzk1MzMzOSIsImV4cCI6IjE0MzM5NTY5MzkiLCJuYmYiOiIxNDMzOTUzMzM5IiwianRpIjoiNDRhMzhmZWI5YTI2MTVjNjMzYjRjZWE1ZmI2MGM2YzgifQ.Y2JiZDllM2Y5ZTA3OGQ0MmE2ZTgwMmFkYmVhYTIxOTBlZDhmNjk5YjVkNzUxZjVlYTBlYjA1ZGI1YThhOTRjMg");
 
             // Create the request to OpenWeatherMap, and open the connection
             urlConnection = (HttpURLConnection) url.openConnection();
@@ -159,7 +162,6 @@ public class RewardsTask extends AsyncTask<Void, Void, ArrayList<Rewards>> {
         */
 
 
-
     @Override
     protected void onPostExecute(ArrayList<Rewards> result) {
 
@@ -170,15 +172,14 @@ public class RewardsTask extends AsyncTask<Void, Void, ArrayList<Rewards>> {
         //////////
 
 
-
         Display display = activity.getWindowManager().getDefaultDisplay();
         DisplayMetrics outMetrics = new DisplayMetrics();
         display.getMetrics(outMetrics);
 
-        float density  = activity.getResources().getDisplayMetrics().density;
-        float dpWidth  = outMetrics.widthPixels / density;
-        int columns = Math.round(dpWidth/300);
-        recyclerView.setLayoutManager(new GridLayoutManager(activity,columns));
+        float density = activity.getResources().getDisplayMetrics().density;
+        float dpWidth = outMetrics.widthPixels / density;
+        int columns = Math.round(dpWidth / 300);
+        recyclerView.setLayoutManager(new GridLayoutManager(activity, columns));
 
 
         /////
@@ -194,35 +195,55 @@ public class RewardsTask extends AsyncTask<Void, Void, ArrayList<Rewards>> {
         JSONArray mJsonArrayProperty = new JSONArray(jsonStr);
         //JSONObject mJsonObject = mJsonArray.getJSONObject(0);
 
-       // JSONArray mJsonArrayProperty = mJsonObject.getJSONArray("data");
+        // JSONArray mJsonArrayProperty = mJsonObject.getJSONArray("data");
         for (int i = 0; i < mJsonArrayProperty.length(); i++) {
             JSONObject rewardsJson = mJsonArrayProperty.getJSONObject(i);
 
+            if (rewardsJson.getString("image_url").equals(null)) {
+
+            }
             String name = rewardsJson.getString("name");
             String description = rewardsJson.getString("description");
             int points = rewardsJson.getInt("points");
             int id = rewardsJson.getInt("id");
-
-            Rewards rewards = new Rewards(id,name,description,points);
-            rewardsTemp.add(rewards);
+            String imgUrl = rewardsJson.getString("image_url");
 
 
+            Rewards rewards = new Rewards(id, name, description, points);
+            rewards.setImgUrl(imgUrl);
+            Bitmap imagen = null;
+            URL imageUrl = null;
+            HttpURLConnection conn = null;
+
+            try {
+                if (imgUrl.equals("null")) {
+
+                } else {
+                    imageUrl = new URL(imgUrl);
+                    conn = (HttpURLConnection) imageUrl.openConnection();
+                    conn.connect();
+
+                    BitmapFactory.Options options = new BitmapFactory.Options();
+                    options.inSampleSize = 1; // el factor de escala a minimizar la imagen, siempre es potencia de 2
+
+                    imagen = BitmapFactory.decodeStream(conn.getInputStream(), new Rect(0, 0, 0, 0), options);
+                    // mIcon11 = BitmapFactory.decodeStream((InputStream) new URL(imgUrl).getContent());
+                    rewards.setImage(imagen);
+
+                }
+                rewardsTemp.add(rewards);
+
+
+            } catch (Exception e) {
+                //Log.e("Error", e.getMessage());
+                e.printStackTrace();
+            }
 
         }
+
+
         return rewardsTemp;
 
     }
-    /*
-    public int av(){
-        Display display = activity.getWindowManager().getDefaultDisplay();
-        DisplayMetrics outMetrics = new DisplayMetrics();
-        display.getMetrics(outMetrics);
 
-        float density  = activity.getResources().getDisplayMetrics().density;
-        float dpWidth  = outMetrics.widthPixels / density;
-        int columns = Math.round(dpWidth/300);
-        mLayoutManager = new GridLayoutManager(getActivity(),columns);
-        mRecyclerView.setLayoutManager(mLayoutManager);
-    }
-    */
 }
