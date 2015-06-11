@@ -49,7 +49,7 @@ public class RewardsTask extends AsyncTask<Void, Void, ArrayList<Rewards>> {
     @Override
     protected ArrayList<Rewards> doInBackground(Void... voids) {
 
-        URL imageUrl = null;
+
         HttpURLConnection urlConnection = null;
         BufferedReader reader = null;
 
@@ -66,7 +66,7 @@ public class RewardsTask extends AsyncTask<Void, Void, ArrayList<Rewards>> {
         return rewardsTemp;*/
         try {
 
-            URL url = new URL(AppConstants.serverUrl + "api/v1/rewards" + "?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXUyJ9.eyJzdWIiOjQ4LCJpc3MiOiJodHRwOlwvXC8zZGVudC5hY2Fyb2xhYnMuY29tXC9hcGlcL3YxXC9hdXRoIiwiaWF0IjoiMTQzMzk1MzMzOSIsImV4cCI6IjE0MzM5NTY5MzkiLCJuYmYiOiIxNDMzOTUzMzM5IiwianRpIjoiNDRhMzhmZWI5YTI2MTVjNjMzYjRjZWE1ZmI2MGM2YzgifQ.Y2JiZDllM2Y5ZTA3OGQ0MmE2ZTgwMmFkYmVhYTIxOTBlZDhmNjk5YjVkNzUxZjVlYTBlYjA1ZGI1YThhOTRjMg");
+            URL url = new URL(AppConstants.serverUrl + "api/v1/rewards" + "?token="+AppConstants.token);
 
             // Create the request to OpenWeatherMap, and open the connection
             urlConnection = (HttpURLConnection) url.openConnection();
