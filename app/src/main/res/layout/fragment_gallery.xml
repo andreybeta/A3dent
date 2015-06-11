@@ -1,7 +1,7 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#e1f5fe"
+    android:background="#ffcdcdcd"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
@@ -10,39 +10,52 @@
     android:layout_width="fill_parent"
     android:layout_height="match_parent">
         <android.support.v7.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="1dp"
+            android:layout_height="310dp"
             android:background="@drawable/rectangulo"
-            android:layout_margin="8dp">
+            >
             <TextView
-                android:text="January"
+                android:text="@string/January"
+                android:layout_marginTop="8dp"
+                android:drawableLeft="@drawable/keyboardleft"
+                android:drawableRight="@drawable/keyboardright"
                 android:gravity="center"
-                android:layout_marginBottom="3dp"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content" />
 
             <android.support.v7.widget.RecyclerView
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="35dp"
                 android:id="@+id/my_recycler_view_January"
                 android:layout_width="wrap_content"
-                android:layout_height="250dp"
+                android:layout_height="280dp"
                 android:scrollbars="horizontal"
                 android:scrollbarAlwaysDrawHorizontalTrack="true"
                 tools:context="com.acarolabs.a3dent.Fragments.GalleryFragment"/>
         </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rectangulo"
-        android:layout_margin="8dp">
+        android:layout_width="fill_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="1dp"
+        android:layout_height="310dp"
+        android:background="@drawable/rectangulo">
     <TextView
-        android:text="February"
+        android:text="@string/February"
+        android:layout_marginTop="8dp"
         android:gravity="center"
+        android:drawableLeft="@drawable/keyboardleft"
+        android:drawableRight="@drawable/keyboardright"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" />
     <android.support.v7.widget.RecyclerView
         android:id="@+id/my_recycler_view_February"
+        android:layout_marginTop="35dp"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:scrollbars="horizontal"
@@ -50,45 +63,99 @@
         tools:context="com.acarolabs.a3dent.Fragments.GalleryFragment"/>
     </android.support.v7.widget.CardView>
 
+    <android.support.v7.widget.CardView
+        android:layout_width="fill_parent"
+        android:saveEnabled="false"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="1dp"
+        android:layout_height="310dp"
+        android:background="@drawable/rectangulo"
+        >
     <TextView
-        android:text="March"
+        android:text="@string/March"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/keyboardleft"
+        android:drawableRight="@drawable/keyboardright"
         android:gravity="center"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" />
     <android.support.v7.widget.RecyclerView
         android:id="@+id/my_recycler_view_March"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_marginTop="35dp"
+        android:layout_height="290dp"
         android:scrollbars="horizontal"
         android:scrollbarAlwaysDrawHorizontalTrack="true"
         tools:context="com.acarolabs.a3dent.Fragments.GalleryFragment"/>
+  </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="fill_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="1dp"
+        android:layout_height="310dp"
+        android:background="@drawable/rectangulo"
+        >
     <TextView
-        android:text="April"
+        android:text="@string/April"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/keyboardleft"
+        android:drawableRight="@drawable/keyboardright"
         android:gravity="center"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" />
     <android.support.v7.widget.RecyclerView
         android:id="@+id/my_recycler_view_April"
+        android:layout_marginTop="35dp"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:scrollbars="horizontal"
         android:scrollbarAlwaysDrawHorizontalTrack="true"
         tools:context="com.acarolabs.a3dent.Fragments.GalleryFragment"/>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="fill_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="1dp"
+        android:layout_height="310dp"
+        android:background="@drawable/rectangulo"
+        >
     <TextView
-        android:text="May"
+        android:text="@string/May"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/keyboardleft"
+        android:drawableRight="@drawable/keyboardright"
         android:gravity="center"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" />
     <android.support.v7.widget.RecyclerView
         android:id="@+id/my_recycler_view_May"
         android:layout_width="match_parent"
-
+        android:layout_marginTop="35dp"
         android:layout_height="300dp"
         android:scrollbars="horizontal"
         android:scrollbarAlwaysDrawHorizontalTrack="true"
         tools:context="com.acarolabs.a3dent.Fragments.GalleryFragment"/>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="fill_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="1dp"
+        android:layout_height="310dp"
+        android:background="@drawable/rectangulo"
+        >
     <TextView
-        android:text="June"
+        android:text="@string/June"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/keyboardleft"
+        android:drawableRight="@drawable/keyboardright"
         android:gravity="center"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" />
@@ -96,23 +163,51 @@
         android:id="@+id/my_recycler_view_June"
         android:layout_width="match_parent"
         android:layout_height="300dp"
+        android:layout_marginTop="35dp"
         android:scrollbars="horizontal"
         android:scrollbarAlwaysDrawHorizontalTrack="true"
         tools:context="com.acarolabs.a3dent.Fragments.GalleryFragment"/>
+   </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="fill_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="1dp"
+        android:layout_height="310dp"
+        android:background="@drawable/rectangulo"
+        >
     <TextView
-        android:text="July"
+        android:text="@string/July"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/keyboardleft"
+        android:drawableRight="@drawable/keyboardright"
         android:gravity="center"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" />
     <android.support.v7.widget.RecyclerView
         android:id="@+id/my_recycler_view_July"
         android:layout_width="match_parent"
+        android:layout_marginTop="35dp"
         android:layout_height="300dp"
         android:scrollbars="horizontal"
         android:scrollbarAlwaysDrawHorizontalTrack="true"
         tools:context="com.acarolabs.a3dent.Fragments.GalleryFragment"/>
+   </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="fill_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="1dp"
+        android:layout_height="310dp"
+        android:background="@drawable/rectangulo"
+        >
     <TextView
-        android:text="August"
+        android:text="@string/August"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/keyboardleft"
+        android:drawableRight="@drawable/keyboardright"
         android:gravity="center"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" />
@@ -121,10 +216,24 @@
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:scrollbars="horizontal"
+        android:layout_marginTop="35dp"
         android:scrollbarAlwaysDrawHorizontalTrack="true"
         tools:context="com.acarolabs.a3dent.Fragments.GalleryFragment"/>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="fill_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="1dp"
+        android:layout_height="310dp"
+        android:background="@drawable/rectangulo"
+        >
     <TextView
-        android:text="September"
+        android:text="@string/September"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/keyboardleft"
+        android:drawableRight="@drawable/keyboardright"
         android:gravity="center"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" />
@@ -132,11 +241,25 @@
         android:id="@+id/my_recycler_view_September"
         android:layout_width="match_parent"
         android:layout_height="300dp"
+        android:layout_marginTop="35dp"
         android:scrollbars="horizontal"
         android:scrollbarAlwaysDrawHorizontalTrack="true"
         tools:context="com.acarolabs.a3dent.Fragments.GalleryFragment"/>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="fill_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="1dp"
+        android:layout_height="310dp"
+        android:background="@drawable/rectangulo"
+        >
     <TextView
-        android:text="October"
+        android:text="@string/October"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/keyboardleft"
+        android:drawableRight="@drawable/keyboardright"
         android:gravity="center"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" />
@@ -144,11 +267,25 @@
         android:id="@+id/my_recycler_view_October"
         android:layout_width="match_parent"
         android:layout_height="300dp"
+        android:layout_marginTop="35dp"
         android:scrollbars="horizontal"
         android:scrollbarAlwaysDrawHorizontalTrack="true"
         tools:context="com.acarolabs.a3dent.Fragments.GalleryFragment"/>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="fill_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="1dp"
+        android:layout_height="310dp"
+        android:background="@drawable/rectangulo"
+        >
     <TextView
-        android:text="November"
+        android:text="@string/November"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/keyboardleft"
+        android:drawableRight="@drawable/keyboardright"
         android:gravity="center"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" />
@@ -156,21 +293,37 @@
         android:id="@+id/my_recycler_view_November"
         android:layout_width="match_parent"
         android:layout_height="300dp"
+        android:layout_marginTop="35dp"
         android:scrollbars="horizontal"
         android:scrollbarAlwaysDrawHorizontalTrack="true"
         tools:context="com.acarolabs.a3dent.Fragments.GalleryFragment"/>
+   </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="fill_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="16dp"
+        android:layout_height="310dp"
+        android:background="@drawable/rectangulo"
+        >
     <TextView
-        android:text="December"
+        android:text="@string/December"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@drawable/keyboardleft"
+        android:drawableRight="@drawable/keyboardright"
         android:gravity="center"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" />
     <android.support.v7.widget.RecyclerView
         android:id="@+id/my_recycler_view_December"
         android:layout_width="match_parent"
+        android:layout_marginTop="35dp"
         android:layout_height="300dp"
         android:scrollbars="horizontal"
         android:scrollbarAlwaysDrawHorizontalTrack="true"
         tools:context="com.acarolabs.a3dent.Fragments.GalleryFragment"/>
+   </android.support.v7.widget.CardView>
 </LinearLayout>
 
 </ScrollView>

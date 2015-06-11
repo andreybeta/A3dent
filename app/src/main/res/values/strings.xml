@@ -22,5 +22,19 @@
     <string name="title_activity_gallery">GalleryActivity</string>
     <string name="title_activity_">Activity</string>
 
+    <!-- Mese del Año -->
+    <string name="January">Enero</string>
+    <string name="February">Febrero</string>
+    <string name="March">Marzo</string>
+    <string name="April">Abril</string>
+    <string name="May">Mayo</string>
+    <string name="June">Junio</string>
+    <string name="July">Julio</string>
+    <string name="August">Agosto</string>
+    <string name="September">Septiembre</string>
+    <string name="October">Octubre</string>
+    <string name="November">Noviembre</string>
+    <string name="December">Diciembre</string>
+
 
 </resources>
