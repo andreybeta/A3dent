@@ -1,6 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="fill_parent"
     android:layout_height="match_parent"
     tools:context="com.acarolabs.a3dent.Activities.ProfilesActivity">
 
@@ -36,10 +36,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Nombre"
+            android:enabled="false"
             android:id="@+id/lblNameProfile" />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:enabled="false"
             android:inputType="textPersonName"
             android:text="Juan Carlos Pantoja"
             android:ems="10"
@@ -54,12 +56,41 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:enabled="false"
             android:inputType="textEmailAddress"
-            android:text="juancarlospantoja@hotmail.com"
             android:focusable="false"
             android:ems="10"
             android:id="@+id/editTextEmailProfile" />
 
+        <TextView
+            android:id="@+id/lblTelefonoProfile"
+            android:text="Telefono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:enabled="false"
+            android:focusable="false"
+            android:ems="10"
+            android:id="@+id/editTextTePhoneProfile" />
+
+        <TextView
+            android:id="@+id/lblAddressProfile"
+            android:text="Dirección"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:enabled="false"
+            android:focusable="false"
+            android:ems="10"
+            android:id="@+id/editTextAddressProfile" />
           
 
     </LinearLayout>
@@ -72,6 +103,8 @@
         android:onClick="onClickSaveProfile"
         android:background="@drawable/selector_button"
         android:src="@drawable/create_white"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
         android:layout_width="56dp"
         android:layout_height="56dp" />
 </RelativeLayout>
