@@ -2,6 +2,7 @@ package com.acarolabs.a3dent.Asyntask;
 
 import android.app.Activity;
 
+import android.app.ProgressDialog;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Rect;
@@ -39,11 +40,17 @@ public class RewardsTask extends AsyncTask<Void, Void, ArrayList<Rewards>> {
 
     private Activity activity;
     private final String LOG_TAG = RewardsTask.class.getSimpleName();
+    ProgressDialog progressDialog;
 
 
     public RewardsTask(Activity activity) {
         super();
         this.activity = activity;
+    }
+    @Override
+    protected void onPreExecute() {
+        super.onPreExecute();
+        progressDialog = ProgressDialog.show(activity, "Espera", "Descargando...");
     }
 
     @Override
@@ -164,6 +171,7 @@ public class RewardsTask extends AsyncTask<Void, Void, ArrayList<Rewards>> {
 
     @Override
     protected void onPostExecute(ArrayList<Rewards> result) {
+        progressDialog.dismiss();
 
 
         RecyclerView recyclerView = (RecyclerView) activity.findViewById(R.id.my_recycler_view_rewards);
@@ -240,7 +248,6 @@ public class RewardsTask extends AsyncTask<Void, Void, ArrayList<Rewards>> {
             }
 
         }
-
 
         return rewardsTemp;
 
