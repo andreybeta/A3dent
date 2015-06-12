@@ -44,7 +44,7 @@ public class PointsAdapter extends RecyclerView.Adapter<PointsAdapter.ViewHolder
     public void onBindViewHolder(PointsAdapter.ViewHolder holder, int position) {
 
         Point point = listPoint.get(position);
-        holder.description.setText(point.getService());
+        holder.description.setText(point.getNotes());
         holder.points.setText(Integer.toString(point.getPoints()));
         holder.itemView.setTag(point);
         holder.properties = point;

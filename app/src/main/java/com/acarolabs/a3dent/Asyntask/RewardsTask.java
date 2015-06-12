@@ -42,7 +42,7 @@ public class RewardsTask extends AsyncTask<Void, Void, ArrayList<Rewards>> {
     @Override
     protected ArrayList<Rewards> doInBackground(Void... voids) {
 
-        URL imageUrl = null;
+
         HttpURLConnection urlConnection = null;
         BufferedReader reader = null;
 
@@ -53,7 +53,8 @@ public class RewardsTask extends AsyncTask<Void, Void, ArrayList<Rewards>> {
 
         ArrayList<Rewards> rewardsTemp = new ArrayList<Rewards>();
         try {
-            URL url = new URL("http://3dent.acarolabs.com/api/v1/rewards");
+
+            URL url = new URL(AppConstants.serverUrl + "api/v1/rewards" + "?token="+AppConstants.token);
 
             // Create the request to OpenWeatherMap, and open the connection
             urlConnection = (HttpURLConnection) url.openConnection();
