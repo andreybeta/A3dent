@@ -10,18 +10,7 @@ public class Rewards {
     private String nameRewards;
     private int pointsRewards;
     private String descriptionRewards;
-    private String imgUrl;
-    private Bitmap image;
-
-    public Bitmap getImage() {
-        return image;
-    }
-
-    public void setImage(Bitmap image) {
-        this.image = image;
-    }
-
-    // private Bitmap imagen;
+   // private Bitmap imagen;
    public Rewards(int idRewards,String nameRewards, String descriptionRewards, int pointsRewards) {
        this.idRewards = idRewards;
 
@@ -62,14 +51,6 @@ public class Rewards {
 
     public void setPointsRewards(int pointsRewards) {
         this.pointsRewards = pointsRewards;
-    }
-
-    public String getImgUrl() {
-        return imgUrl;
-    }
-
-    public void setImgUrl(String imgUrl) {
-        this.imgUrl = imgUrl;
     }
 
     /*public Bitmap getImagen() {

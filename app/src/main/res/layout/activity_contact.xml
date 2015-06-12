@@ -29,82 +29,84 @@
 
     </RelativeLayout>
 
-    <LinearLayout
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_centerVertical="true"
-        android:layout_gravity="center"
 
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
-        <Button
-            android:drawableLeft="@drawable/webwhite"
-            android:text="www.3dent.com"
-            android:paddingLeft="10dp"
-            android:background="@drawable/editextlogin"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="4dp"
-            android:gravity="center"
-            android:layout_gravity="center_vertical|center_horizontal"        android:textColor="#ffff"
-            android:elevation="10dp"
-            android:layout_width="250dp"
-            android:layout_height="43dp" />
-
-        <Button
-            android:drawableLeft="@drawable/at"
-            android:text="3dent"
-            android:background="@drawable/editextlogin"
-            android:paddingLeft="10dp"
-            android:layout_marginBottom="4dp"
-            android:gravity="center"
-            android:layout_gravity="center_vertical|center_horizontal"        android:textColor="#ffff"
-            android:elevation="10dp"
-            android:layout_width="250dp"
-
-            android:layout_height="43dp"
-            android:id="@+id/contact" />
+<LinearLayout
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_centerVertical="true"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
 
 
-        <Button
-            android:clickable="true"
-            android:drawableLeft="@drawable/phonewhite"
-            android:text="+57 7332233"
-            android:background="@drawable/edittextstyle"
-            android:paddingLeft="10dp"
-            android:layout_marginBottom="4dp"
-            android:gravity="center"
-            android:layout_gravity="center_vertical|center_horizontal"        android:textColor="#ffff"
-            android:elevation="10dp"
-            android:layout_width="250dp"
-            android:layout_height="43dp" />
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="10dp"
-        android:gravity="center"
-        android:layout_gravity="center|bottom"
+    <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
 
+            <LinearLayout
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
 
-        <ImageButton
-            android:onClick="onclickFacebook"
-            android:src="@drawable/facebook"
-            android:layout_width="70dp"
-            android:layout_height="70dp" />
-        <ImageButton
+                <TextView
+                    android:text="3Dent app"
+                    android:textColor="#fefefe"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginBottom="10dp"
+                    android:text="Versión 1.0"
+                    android:textColor="#fefefe"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="www.facebook.com/acarolabs"
+                    android:textColor="#fefefe"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="twitter.com/acarolabs"
+                    android:textColor="#fefefe"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="www.acarolabs.com"
+                    android:textColor="#fefefe"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="contacto@acarolabs.org"
+                    android:textColor="#fefefe"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="tel:7208538"
+                    android:textColor="#fefefe"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
 
-            android:onClick="onclickTwitter"
-            android:src="@drawable/twitter"
-            android:layout_width="70dp"
-            android:layout_height="70dp" />
+            </LinearLayout>
 
+    </ScrollView>
+</LinearLayout>
 
-
-    </LinearLayout>
 </RelativeLayout>

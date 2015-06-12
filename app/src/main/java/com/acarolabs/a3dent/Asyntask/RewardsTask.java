@@ -2,19 +2,13 @@ package com.acarolabs.a3dent.Asyntask;
 
 import android.app.Activity;
 
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Rect;
 import android.os.AsyncTask;
-import android.support.v7.widget.GridLayoutManager;
-
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.DisplayMetrics;
 import android.util.Log;
-import android.view.Display;
 
 import com.acarolabs.a3dent.Adapters.RewardsAdapter;
-import com.acarolabs.a3dent.AppConstants;
 import com.acarolabs.a3dent.Models.Rewards;
 import com.acarolabs.a3dent.R;
 
@@ -29,8 +23,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
-
-import com.acarolabs.a3dent.AppConstants.*;
+import java.util.List;
 
 /**
  * Created by personal on 21/05/15.
@@ -57,13 +50,8 @@ public class RewardsTask extends AsyncTask<Void, Void, ArrayList<Rewards>> {
         // Will contain the raw JSON response as a string.
         String forecastJsonStr = null;
 
-/*
-        ArrayList<Rewards> rewardsTemp = new ArrayList<Rewards>();
-        rewardsTemp.add(new Rewards(1,"Panomarica dental","kdfkdfkfdkfdk",10));
-        rewardsTemp.add(new Rewards(1,"Panomarica dental","kdfkdfkfdkfdk",10));
-        rewardsTemp.add(new Rewards(1,"Panomarica dental","kdfkdfkfdkfdk",10));
 
-        return rewardsTemp;*/
+        ArrayList<Rewards> rewardsTemp = new ArrayList<Rewards>();
         try {
 
             URL url = new URL(AppConstants.serverUrl + "api/v1/rewards" + "?token="+AppConstants.token);
@@ -121,7 +109,6 @@ public class RewardsTask extends AsyncTask<Void, Void, ArrayList<Rewards>> {
             e.printStackTrace();
         }
         return null;
-
     }
 
 
@@ -162,88 +149,48 @@ public class RewardsTask extends AsyncTask<Void, Void, ArrayList<Rewards>> {
         */
 
 
+
     @Override
     protected void onPostExecute(ArrayList<Rewards> result) {
-
 
         RecyclerView recyclerView = (RecyclerView) activity.findViewById(R.id.my_recycler_view_rewards);
         recyclerView.setHasFixedSize(true);//que todo lo optimize
         recyclerView.setAdapter(new RewardsAdapter(result, R.layout.row_rewards, activity));
-        //////////
-
-
-        Display display = activity.getWindowManager().getDefaultDisplay();
-        DisplayMetrics outMetrics = new DisplayMetrics();
-        display.getMetrics(outMetrics);
-
-        float density = activity.getResources().getDisplayMetrics().density;
-        float dpWidth = outMetrics.widthPixels / density;
-        int columns = Math.round(dpWidth / 300);
-        recyclerView.setLayoutManager(new GridLayoutManager(activity, columns));
-
-
-        /////
-      /*  recyclerView.setLayoutManager(new LinearLayoutManager(activity));//linear x q es lienas o si no tambn grillas
-        recyclerView.setItemAnimator(new DefaultItemAnimator());*/
+        recyclerView.setLayoutManager(new LinearLayoutManager(activity));//linear x q es lienas o si no tambn grillas
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
     }
 
     public static ArrayList<Rewards> getListRewards(String jsonStr) throws JSONException {
 
         ArrayList<Rewards> rewardsTemp = new ArrayList<Rewards>();
 
-        //JSONObject mJsonObject = new JSONObject(jsonStr);
-        JSONArray mJsonArrayProperty = new JSONArray(jsonStr);
-        //JSONObject mJsonObject = mJsonArray.getJSONObject(0);
+        JSONObject mJsonObject = new JSONObject(jsonStr);
+       /* JSONArray mJsonArray = new JSONArray(jsonStr);
+        JSONObject mJsonObject = mJsonArray.getJSONObject(0);*/
 
-        // JSONArray mJsonArrayProperty = mJsonObject.getJSONArray("data");
+        JSONArray mJsonArrayProperty = mJsonObject.getJSONArray("data");
         for (int i = 0; i < mJsonArrayProperty.length(); i++) {
             JSONObject rewardsJson = mJsonArrayProperty.getJSONObject(i);
 
-            if (rewardsJson.getString("image_url").equals(null)) {
-
-            }
             String name = rewardsJson.getString("name");
             String description = rewardsJson.getString("description");
             int points = rewardsJson.getInt("points");
             int id = rewardsJson.getInt("id");
-            String imgUrl = rewardsJson.getString("image_url");
+
+            Rewards rewards = new Rewards(id,name,description,points);
+            rewardsTemp.add(rewards);
 
 
-            Rewards rewards = new Rewards(id, name, description, points);
-            rewards.setImgUrl(imgUrl);
-            Bitmap imagen = null;
-            URL imageUrl = null;
-            HttpURLConnection conn = null;
-
-            try {
-                if (imgUrl.equals("null")) {
-
-                } else {
-                    imageUrl = new URL(imgUrl);
-                    conn = (HttpURLConnection) imageUrl.openConnection();
-                    conn.connect();
-
-                    BitmapFactory.Options options = new BitmapFactory.Options();
-                    options.inSampleSize = 1; // el factor de escala a minimizar la imagen, siempre es potencia de 2
-
-                    imagen = BitmapFactory.decodeStream(conn.getInputStream(), new Rect(0, 0, 0, 0), options);
-                    // mIcon11 = BitmapFactory.decodeStream((InputStream) new URL(imgUrl).getContent());
-                    rewards.setImage(imagen);
-
-                }
-                rewardsTemp.add(rewards);
-
-
-            } catch (Exception e) {
-                //Log.e("Error", e.getMessage());
-                e.printStackTrace();
-            }
 
         }
 
 
+        //for (int i = 0)
+
+        //JSONObject nombre = enlace.getJSONObject("titulo");
         return rewardsTemp;
+        //return nombre.toString();
+
 
     }
-
 }

@@ -1,7 +1,9 @@
 package com.acarolabs.a3dent.Activities;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -13,6 +15,10 @@ public class GalleryActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gallery);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.activity_my_toolbar);
+        toolbar.setTitle(R.string.app_name);
+        setSupportActionBar(toolbar);
     }
 
 
@@ -29,12 +35,23 @@ public class GalleryActivity extends ActionBarActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+        switch (id){
+            case R.id.action_settings:
+                return true;
+            case R.id.action_contact:
+                Intent intent = new Intent(this,ContactActivity.class);
+                startActivity(intent);
+                return true;
+            case R.id.action_profile:
+                Intent intents = new Intent(this,ProfilesActivity.class);
+                startActivity(intents);
+            case R.id.action_quit:
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+
         }
-
-        return super.onOptionsItemSelected(item);
     }
 }

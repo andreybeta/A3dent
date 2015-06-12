@@ -26,6 +26,7 @@
         </LinearLayout>
         <LinearLayout
             android:orientation="vertical"
+            android:layout_margin="16dp"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent">
 
@@ -37,8 +38,6 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:ems="10"
                 android:id="@+id/editTextNameProfile" />
             <TextView
                 android:id="@+id/lblEmailProfile"
@@ -49,13 +48,34 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
-                android:ems="10"
                 android:id="@+id/editTextEmailProfile" />
+
+            <TextView
+                android:id="@+id/lblTelefonoProfile"
+                android:text="Telefono"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editTextTePhoneProfile" />
+
+            <TextView
+                android:id="@+id/lblAddressProfile"
+                android:text="Dirección"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editTextAddressProfile" />
 
             <Button
                 android:layout_gravity="center"
-                android:text="Save"
+                android:text="Actualizar"
+                android:background="#fefefe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
@@ -68,6 +88,8 @@
         android:layout_alignParentRight="true"
         android:background="@drawable/selector_button"
         android:onClick="onClickProfile"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
         android:src="@drawable/reply_white"
         android:layout_width="56dp"
         android:layout_height="56dp" />
